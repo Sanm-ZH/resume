@@ -347,7 +347,7 @@ a {
     margin-bottom: 5px;
   }
   .item-des {
-    margin-bottom: 16px;
+    margin: 10px 0px 15px;
   }
   .section-content {
     text-align: justify;
@@ -415,4 +415,18 @@ a {
   @media print {
     display: none;
   }
+}
+
+.icon-time {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/static/time.svg") no-repeat;
+  background-size: 100% 100%;
+  margin-right: 5px;
+}
+
+.time-cont {
+  display: flex;
+  height: 20px;
 }
