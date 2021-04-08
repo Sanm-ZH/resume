@@ -7,6 +7,7 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const EndWebpackPlugin = require('end-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const ghpages = require('gh-pages');
 
 // function publishGhPages() {
@@ -108,5 +109,12 @@ module.exports = {
       // 重新发布到 ghpages
       // await publishGhPages();
     }),
+    new CopyWebpackPlugin([
+        {
+          from: path.resolve(__dirname, 'static'),
+          to: 'static',
+          ignore: ['.*']
+        }
+     ])
   ]
 };
